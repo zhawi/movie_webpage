@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>OctoMovies</title>
+    <meta name="description" content="Hollywood is an academic front-end project for Web Development class.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./styles.css">
+    <link href='https://cdn.jsdelivr.net/npm/@mdi/font@5.8.55/css/materialdesignicons.min.css' rel='stylesheet'>
+    <script src="./main.js" async defer></script>
+</head>
+
+<body>
+    <div class="background"></div>
+    <header>
+        <img src="./assets/logo.svg" width="65px" />
+        <nav id="navigation">
+            <a id="goToAbout">About</a>
+            <a id="goToMovies">Movies</a>
+        </nav>
+        <div class="user-settings" id="loginButton">
+            <span class="mdi mdi-account"></span>
+            <span id="userLoginName">Login</span>
+        </div>
+    </header>
+    <section class="small-section" id="aboutSection">
+        <article class="centered">
+            <div class="about-text">
+                <h1>OctoMovies</h1>
+                <p>
+                    OctoMovies is an academic project for the web development class from the UAL´s computer science
+                    engineering bachelor degree.
+                </p>
+                <p>
+                    An online database of information related to films, television programs, home videos, and streaming
+                    content online – including cast, production crew and personal biographies, plot summaries, trivia,
+                    ratings, and fan and critical reviews.
+                </p>
+                <h1>Authors</h1>
+                <ul>
+                    <li>Nuno Rodrigues 30002510</li>
+                    <li>Pedro Carvalho 30002909</li>
+                    <li>Pedro Martins 30003748</li>
+                </ul>
+            </div>
+        </article>
+    </section>
+    <section id="moviesSection">
+        <article class="movies-container" id="moviesContainer">
+            <!--MOVIES WILL BE LOADED HERE-->
+        </article>
+    </section>
+    <footer>
+        All rights reserved 2020/2021
+    </footer>
+
+    <div class="dialogue" id="dialogue">
+        <div class="form-wrapper">
+            <div class="form-header">
+                <h1 id="dialogueTitle">LOGIN</h1>
+                <span class="mdi mdi-close-circle" id="closeDialogue"></span>
+            </div>
+            <form id="loginForm" class="show">
+                <input required class="input" type="text" id="userName" placeholder="username *">
+                <input required class="input" type="password" id="userPassword" placeholder="password *">
+                <div class="actions">
+                    <button class="button secondary" id="goToRegister" type="button">REGISTER</button>
+                    <button class="button" id="login" type="submit">LOGIN</button>
+                </div>
+            </form>
+            <form id="regForm">
+                <input required class="input" type="text" id="regName" placeholder="Name *">
+                <input required class="input" type="email" id="regUserEmail" placeholder="email *">
+                <input required class="input" type="text" id="regUserName" placeholder="username *">
+                <input required class="input" type="password" id="regUserPassword" placeholder="password *">
+                <input required class="input" type="password" id="regUserRepPassword" placeholder="repeat password *">
+                <div class="actions">
+                    <button class="button secondary" id="goToLogin" type="button">LOGIN</button>
+                    <button class="button" id="register" type="submit">REGISTER</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="movie-details">
+        <div class="details-wrapper" id="movieDetails">
+        </div>
+        <div class="actions">
+            <button class="button secondary" type="button" id="closeDetails">BACK</button>
+            <button class="button secondary" type="button" id="lunchTrailer">TRAILER</button>
+            <button class="button" type="button" id="addToFavourites">MARK AS FAVOURITE</button>
+        </div>
+    </div>
+
+    <div id="backoffice" class="backoffice-wrapper">
+        <span class="close-button mdi mdi-close-circle" id="closeBackoffice"></span>
+        <h1>OctoMovies DB</h1>
+        <div class="tbl-header">
+            <table cellpadding="0" cellspacing="0" border="0">
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th>Title</th>
+                        <th>Director</th>
+                        <th>Producer</th>
+                        <th>Cast</th>
+                        <th>Description</th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                    </tr>
+                </thead>
+            </table>
+        </div>
+        <div class="tbl-content">
+            <table cellpadding="0" cellspacing="0" border="0">
+                <tbody id="movieList">
+
+                </tbody>
+            </table>
+        </div>
+        <button class="float-button">
+            <span class="mdi mdi-24px mdi-plus" id="closeDialogue"></span>
+        </button>
+    </div>
+</body>
+
+</html>
